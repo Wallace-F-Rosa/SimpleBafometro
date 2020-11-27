@@ -1,18 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Tela1"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/ltCampos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
 
-    <TextView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPeso"
+            android:text="Peso:"
+            android:textStyle="bold"
+            android:layout_alignTop="@id/edtPeso"
+            android:layout_toLeftOf="@id/edtPeso"
+            android:layout_marginRight="8dp"
+            />
+
+        <EditText
+            android:id="@+id/edtPeso"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="132dp"
+            android:layout_alignParentTop="true"
+            android:inputType="numberDecimal"
+            />
+
+        <TextView
+            android:id="@+id/txtSexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexo (m/f):"
+            android:textStyle="bold"
+            android:layout_below="@id/edtPeso"
+            android:layout_toLeftOf="@id/edtSexo"
+            android:layout_alignTop="@id/edtSexo"
+            android:layout_marginRight="8dp"
+            />
+
+        <EditText
+            android:id="@+id/edtSexo"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtPeso"
+            android:layout_alignTop="@id/edtSexo"
+            android:layout_alignLeft="@id/edtPeso"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/txtCopos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nº copos:"
+            android:textStyle="bold"
+            android:layout_below="@id/edtSexo"
+            android:layout_toLeftOf="@id/edtCopos"
+            android:layout_marginRight="8dp"
+            />
+
+        <EditText
+            android:id="@+id/edtCopos"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtSexo"
+            android:layout_alignLeft="@id/edtPeso"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/txtJejum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Está de jejum (s/n):"
+            android:textStyle="bold"
+            android:layout_below="@id/edtCopos"
+            android:layout_toLeftOf="@id/edtJejum"
+            android:layout_marginRight="8dp"
+            />
+
+        <EditText
+            android:id="@+id/edtJejum"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtCopos"
+            android:layout_alignLeft="@id/edtPeso"
+            android:inputType="text"
+            />
+
+    </RelativeLayout>
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Enviar Dados"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
