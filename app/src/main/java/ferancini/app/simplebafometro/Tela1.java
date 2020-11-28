@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Tela1 extends AppCompatActivity {
     private EditText edtPeso;
@@ -23,7 +24,10 @@ public class Tela1 extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (data != null) {
+            float alcoolemia = data.getFloatExtra("alcoolemia", 0f);
+            String classificacao = data.getStringExtra("classificacao");
 
+            Toast.makeText(this, "Taxa de alcoolemia : "+alcoolemia + "\nClassificação : "+classificacao, Toast.LENGTH_LONG).show();
         }
     }
 
