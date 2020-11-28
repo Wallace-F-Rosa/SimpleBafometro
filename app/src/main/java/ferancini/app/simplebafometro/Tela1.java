@@ -34,7 +34,7 @@ public class Tela1 extends AppCompatActivity {
     }
 
     public void click(View v){
-        Intent it = new Intent(this, Tela2.class);
+        Intent it = new Intent("BAFOMETRO");
         edtPeso = (EditText) findViewById(R.id.edtPeso);
         edtSexo = (EditText) findViewById(R.id.edtSexo);
         edtCopos = (EditText) findViewById(R.id.edtCopos);
