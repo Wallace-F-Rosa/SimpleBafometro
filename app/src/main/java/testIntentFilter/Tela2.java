@@ -1,10 +1,12 @@
-package ferancini.app.simplebafometro;
+package testIntentFilter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import ferancini.app.simplebafometro.R;
 
 public class Tela2 extends AppCompatActivity {
 

@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import testIntentFilter.Tela2;
+
 public class Tela1 extends AppCompatActivity {
     private EditText edtPeso;
     private EditText edtSexo;
@@ -32,7 +34,7 @@ public class Tela1 extends AppCompatActivity {
     }
 
     public void click(View v){
-        Intent it = new Intent(this,Tela2.class);
+        Intent it = new Intent(this, Tela2.class);
         edtPeso = (EditText) findViewById(R.id.edtPeso);
         edtSexo = (EditText) findViewById(R.id.edtSexo);
         edtCopos = (EditText) findViewById(R.id.edtCopos);
